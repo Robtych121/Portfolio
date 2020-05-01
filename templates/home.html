@@ -8,9 +8,12 @@
   Hi {{ user.username }}!
   <p><a href="{% url 'logout' %}">logout</a></p>
   <p><a href="{% url 'password_change' %}">Change Password</a></p>
+  {% if request.user.is_staff %}
+  <p><a href="/admin">Admin</a></p>
+  {% endif %}
 {% else %}
   <p>You are not logged in</p>
   <p><a href="{% url 'login' %}">login</a></p>
-  <p><a href="{% url 'register' %}">Register</a></p>
+  <p><a href="{% url 'django_registration_register' %}">Register</a></p>
 {% endif %}
 {% endblock %}
