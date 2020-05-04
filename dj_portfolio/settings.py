@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django_forms_bootstrap',
     'django_registration',
     'accounts',
+    'static_content',
     'products',
     'cart',
     'checkout',

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+    {% for page in pages %}
+        {{ page.title}}
+    {% endfor %}
+{% endblock %}
+
+{% block page_heading%}
+    {% for page in pages %}
+        {{ page.header}}
+    {% endfor %}
+{% endblock %}
+
+{% block content %}
+
+{% for page in pages %}
+{{ page.content|safe}}
+{% endfor %}
+
+{% endblock %}
