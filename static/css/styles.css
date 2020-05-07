@@ -79,3 +79,30 @@ body {
 .nav {
     display: inline-flex;
 }
+
+.navbar {
+    background: none !important;
+    padding: 0px;
+    text-align: center;
+}
+
+.navbar-toggler {
+    margin: 0px auto;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    border-radius: 6px;
+    margin: 5px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #e86b00;
+    font-weight: bold;
+}
