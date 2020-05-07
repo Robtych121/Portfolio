@@ -1,6 +1,6 @@
 from django.contrib.auth import views
 from django.urls import path
-from .views import userControlPanel
+from .views import userControlPanel, profile
 
 urlpatterns = [
     path('login/', views.LoginView.as_view(), name='login'),
@@ -11,5 +11,6 @@ urlpatterns = [
     path('password-reset/done/', views.PasswordResetDoneView.as_view(), name='password_reset_done'),
     path('reset/<uidb64>/<token>/', views.PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
     path('reset/done/', views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
-    path('ucp/', userControlPanel, name="user_control_panel")
+    path('ucp/', userControlPanel, name="user_control_panel"),
+    path('update-profile/', profile, name="user_update_profile")
 ]
