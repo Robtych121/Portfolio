@@ -150,3 +150,14 @@ STRIPE_SECRET = os.getenv('STRIPE_SECRET')
 # Django Registration Settings
 
 ACCOUNT_ACTIVATION_DAYS = 7
+
+# Django Message Settings
+from django.contrib.messages import constants as messages
+
+MESSAGE_TAGS = {
+    messages.DEBUG: 'alert-info',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
+}
