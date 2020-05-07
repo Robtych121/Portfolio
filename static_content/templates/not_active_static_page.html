@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block page_title %}Page Not Found{% endblock %}
+{% block page_heading%}Page Not Found{% endblock %}
+
+{% block content %}
+<p>Sorry, It seems this page doesnt exist or has been removed.</p>
+<p><a href="{% url 'home'%}" class="btn btn-danger btn-lg">Go To Homepage</a></p>
+{% endblock %}

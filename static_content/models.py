@@ -13,6 +13,12 @@ class Static_Page(models.Model):
     title = models.CharField(max_length=254, default='', null=True)
     header = models.CharField(max_length=254, default='', null=True)
     content = models.TextField()
+    YESNOCHOICES = (
+        ('Yes', 'Yes'),
+        ('No', 'No')
+    )
+    published = models.CharField(max_length=3, default='No', choices=YESNOCHOICES)
+    onmenu = models.CharField(max_length=3, default='No',  choices=YESNOCHOICES)
     created_date = models.DateField(default=datetime.now)
     updated_date = models.DateField(default=datetime.now)
 
