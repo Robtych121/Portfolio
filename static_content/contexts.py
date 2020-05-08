@@ -3,6 +3,6 @@ from .models import Static_Page
 
 
 def cart_menu_items(request):
-    menu_items = Static_Page.objects.filter(onmenu='Yes')
+    menu_items = Static_Page.objects.filter(onmenu='Yes').order_by('order')
 
     return { 'menu_items':menu_items }

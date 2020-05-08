@@ -26,7 +26,7 @@ def remove_from_menu(modeladmin, request, queryset):
 
 
 class StaticContentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'url', 'created_date', 'updated_date','published','onmenu')
+    list_display = ('name', 'url', 'order', 'created_date', 'updated_date','published','onmenu')
     actions = [publish_page,unpublish_page,add_to_menu,remove_from_menu]
 
 

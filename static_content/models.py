@@ -19,6 +19,7 @@ class Static_Page(models.Model):
     )
     published = models.CharField(max_length=3, default='No', choices=YESNOCHOICES)
     onmenu = models.CharField(max_length=3, default='No',  choices=YESNOCHOICES)
+    order = models.IntegerField(default=0)
     created_date = models.DateField(default=datetime.now)
     updated_date = models.DateField(default=datetime.now)
 

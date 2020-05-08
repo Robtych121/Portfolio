@@ -15,15 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.views.generic.base import TemplateView
+from django.views.generic.base import TemplateView, RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    path('', RedirectView.as_view(url='/home'), name='home'),
     path('accounts/', include('django_registration.backends.activation.urls')),
     path('accounts/', include('accounts.urls')),
     path('cart/', include('cart.urls')),
     path('products', include('products.urls')),
     path('checkout/', include('checkout.urls')),
-    path('p/', include('static_content.urls'))
+    path('', include('static_content.urls'))
 ]
