@@ -2,7 +2,12 @@
 
 {% block page_title %}{{ page.title}}{% endblock %}
 
-{% block page_heading%}{{ page.header}}{% endblock %}
+{% block page_heading%}
+
+{% if page.header %}
+{{ page.header}}
+{% endif %}
+{% endblock %}
 
 {% block content %}
     {{ page.content|safe}}

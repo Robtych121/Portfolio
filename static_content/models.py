@@ -11,7 +11,7 @@ class Static_Page(models.Model):
     name = models.CharField(max_length=254, default='')
     url = models.CharField(max_length=254, default='', unique=True)
     title = models.CharField(max_length=254, default='', null=True)
-    header = models.CharField(max_length=254, default='', null=True)
+    header = models.CharField(max_length=254, default='', null=True, blank=True)
     content = models.TextField()
     YESNOCHOICES = (
         ('Yes', 'Yes'),
