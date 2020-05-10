@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['robert-davies-portfolio.herokuapp.com', '127.0.0.1', 'robert-davies.net']
+ALLOWED_HOSTS = ['robert-davies-portfolio.herokuapp.com', '127.0.0.1', 'robert-davies.net', 'www.robert-davies.net']
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
