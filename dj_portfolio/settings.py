@@ -51,7 +51,8 @@ INSTALLED_APPS = [
     'cart',
     'checkout',
     'storages',
-    'contact_form'
+    'contact_form',
+    'captcha'
 ]
 
 MIDDLEWARE = [
@@ -196,3 +197,8 @@ MESSAGE_TAGS = {
     messages.WARNING: 'alert-warning',
     messages.ERROR: 'alert-danger',
 }
+
+# Recaptcha Settings
+
+RECAPTCHA_PUBLIC_KEY = os.environ.get('RECAPTCHA_PUBLIC_KEY')
+RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY')
