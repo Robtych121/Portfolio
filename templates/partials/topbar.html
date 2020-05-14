@@ -1,0 +1,39 @@
+<div id="TopBar" class="row no-gutters">
+    <div class="container">
+        <div class="row">
+    <div class="col-md-6">
+        <div>
+            <ul class="nav topmenu">
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'user_control_panel'%}">UCP</a>
+                  </li>
+                {% if request.user.is_staff %}
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin" target="_blank">ACP</a>
+                </li>
+                {% endif %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'django_registration_register' %}">Register</a>
+                </li>
+                {% endif %}
+                
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="social-media-icons">
+            <a class="social-logo" href=""><i class="fab fa-facebook-square"></i></a>
+            <a class="social-logo" href=""><i class="fab fa-github-square"></i></a>
+            <a class="social-logo" href=""><i class="fab fa-twitter-square"></i></a>
+        </div>
+    </div></div>
+    </div>
+</div>

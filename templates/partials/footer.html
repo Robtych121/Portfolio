@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="footer col-12">
+        <ul class="nav">
+        {% for menu_item in menu_items %}
+        <li class="nav-item">    
+            <a class="nav-link" href="/{{menu_item.url}}">{{menu_item.name}}</a>
+        </li>
+        {% endfor %}
+        </ul><br>
+        <a class="nav-link" href="/legal">Legal</a>
+    </div>
+</div>
