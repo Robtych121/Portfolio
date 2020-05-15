@@ -52,7 +52,8 @@ INSTALLED_APPS = [
     'checkout',
     'storages',
     'contact_form',
-    'captcha'
+    'captcha',
+    'portfolio'
 ]
 
 MIDDLEWARE = [
