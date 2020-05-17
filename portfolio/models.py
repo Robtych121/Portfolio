@@ -18,7 +18,9 @@ class Portfolios(models.Model):
     order = models.IntegerField(default=0)
     created_date = models.DateField(default=datetime.now)
     description = models.TextField(default='')
-    image = models.ImageField(upload_to='images', default='')
+    image = models.ImageField(upload_to='projects/', default='')
+    features = models.TextField(default='')
+    demolink = models.CharField(max_length=254, default='')
 
 
     def __str__(self):

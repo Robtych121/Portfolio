@@ -5,7 +5,8 @@
 {% block page_heading%}Portfolio{% endblock %}
 
 {% block content %}
-<p>Categories:</p>
+<p>Thank you taking an interest what i have completed, please see below examples of my work.</p>
+<hr>
 <div class="category_toolbar">
     <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="categorySelector" id="show_all" value="show_all" checked>
@@ -30,7 +31,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ portfolio.category}}</h5>
                         <p class="card-text">{{ portfolio.description|slice:":100"}}...</p>
-                        <a href="{% url 'view_portfolio' portfolio.id %}" class="card-link">Go somewhere</a>
+                        <a href="{% url 'view_portfolio' portfolio.id %}" class="card-link">View More</a>
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">Created: {{portfolio.created_date}}</small>

@@ -11,8 +11,10 @@
     </div>
     <div class="col-lg-6">
         <p><strong>Category:</strong><br>{{ portfolio.category}}</p>
-        <p><strong>Description:</strong><br>{{ portfolio.description}}</p>
         <p><strong>Created Date:</strong><br>{{portfolio.created_date}}</p>
+        <p><strong>Demo Link:</strong><br>{{portfolio.demolink}}</p>
+        <p><strong>Features:</strong><br>{{ portfolio.features|safe}}</p>
+        <p><strong>Description:</strong><br>{{ portfolio.description|safe}}</p>
     </div>
 </div>
 {% endblock %}

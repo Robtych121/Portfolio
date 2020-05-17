@@ -158,7 +158,7 @@ body {
     opacity: 0;
     position: fixed;
     width: 0;
-  }
+}
 
 .category_toolbar label {
     display: inline-block;
@@ -192,8 +192,16 @@ body {
     padding: 15px;
     border-radius: 10px; 
     font-size: 18px;
-  }
+}
   
-  #GoTopBtn:hover {
+#GoTopBtn:hover {
     background-color: #0059D3;
-  }
+}
+
+a {
+    color: #e86b00;
+}
+
+a:hover {
+    color: #000;
+}
