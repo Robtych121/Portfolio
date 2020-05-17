@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block page_title %}Portfolio - {{ portfolio.name}}{% endblock %}
+{% block page_heading%}Portfolio - {{ portfolio.name}}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-6">
+        <img src="https://rdportfolio.s3.amazonaws.com/media/{{ portfolio.image}}" alt="{{portfolio.name}} Image">
+    </div>
+    <div class="col-lg-6">
+        <p><strong>Category:</strong><br>{{ portfolio.category}}</p>
+        <p><strong>Description:</strong><br>{{ portfolio.description}}</p>
+        <p><strong>Created Date:</strong><br>{{portfolio.created_date}}</p>
+    </div>
+</div>
+{% endblock %}

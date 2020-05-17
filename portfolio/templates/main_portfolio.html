@@ -30,7 +30,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ portfolio.category}}</h5>
                         <p class="card-text">{{ portfolio.description|slice:":100"}}...</p>
-                        <a href="#" class="card-link">Go somewhere</a>
+                        <a href="{% url 'view_portfolio' portfolio.id %}" class="card-link">Go somewhere</a>
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">Created: {{portfolio.created_date}}</small>
