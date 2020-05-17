@@ -1,7 +1,8 @@
 from django.db import models
+from datetime import datetime
 
 # Create your models here.
-class main_portfolio(models.Model):
+class Portfolios(models.Model):
 
     class Meta:
         verbose_name = 'Portfolio'
@@ -14,3 +15,11 @@ class main_portfolio(models.Model):
         ('No', 'No')
     )
     published = models.CharField(max_length=3, default='No', choices=YESNOCHOICES)
+    order = models.IntegerField(default=0)
+    created_date = models.DateField(default=datetime.now)
+    description = models.TextField(default='')
+    image = models.ImageField(upload_to='images', default='')
+
+
+    def __str__(self):
+        return self.name

@@ -1,7 +1,10 @@
 from django.shortcuts import render
-from .models import main_portfolio
+from .models import Portfolios
+
 
 # Create your views here.
+def mainportfolio(request):
+    portfolios = Portfolios.objects.filter(published='Yes').order_by('order')
+    categories = Portfolios.objects.values_list('category', flat=True).distinct()
 
-def main_portfolio(request):
-    return render(request, 'main_portfolio.html')
+    return render(request, 'main_portfolio.html', {'portfolios': portfolios, 'categories': categories})
