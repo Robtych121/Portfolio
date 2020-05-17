@@ -205,3 +205,8 @@ a {
 a:hover {
     color: #000;
 }
+
+
+.portfolio_image{
+    width: 100%;
+}
